@@ -148,103 +148,103 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\pixman-access-accessors.c"
+				RelativePath="..\pixman-access-accessors.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-access.c"
+				RelativePath="..\pixman-access.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-bits-image.c"
+				RelativePath="..\pixman-bits-image.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-combine-float.c"
+				RelativePath="..\pixman-combine-float.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-combine32.c"
+				RelativePath="..\pixman-combine32.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-conical-gradient.c"
+				RelativePath="..\pixman-conical-gradient.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-edge-accessors.c"
+				RelativePath="..\pixman-edge-accessors.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-edge.c"
+				RelativePath="..\pixman-edge.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-fast-path.c"
+				RelativePath="..\pixman-fast-path.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-glyph.c"
+				RelativePath="..\pixman-glyph.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-gradient-walker.c"
+				RelativePath="..\pixman-gradient-walker.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-image.c"
+				RelativePath="..\pixman-image.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-implementation.c"
+				RelativePath="..\pixman-implementation.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-linear-gradient.c"
+				RelativePath="..\pixman-linear-gradient.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-matrix.c"
+				RelativePath="..\pixman-matrix.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-noop.c"
+				RelativePath="..\pixman-noop.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-radial-gradient.c"
+				RelativePath="..\pixman-radial-gradient.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-region16.c"
+				RelativePath="..\pixman-region16.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-region32.c"
+				RelativePath="..\pixman-region32.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-solid-fill.c"
+				RelativePath="..\pixman-solid-fill.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-timer.c"
+				RelativePath="..\pixman-timer.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-trap.c"
+				RelativePath="..\pixman-trap.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-utils.c"
+				RelativePath="..\pixman-utils.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-x86.c"
+				RelativePath="..\pixman-x86.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman.c"
+				RelativePath="..\pixman.c"
 				>
 			</File>
 		</Filter>
@@ -254,35 +254,35 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath="..\..\pixman-accessor.h"
+				RelativePath="..\pixman-accessor.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-combine32.h"
+				RelativePath="..\pixman-combine32.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-compiler.h"
+				RelativePath="..\pixman-compiler.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-edge-imp.h"
+				RelativePath="..\pixman-edge-imp.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-inlines.h"
+				RelativePath="..\pixman-inlines.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-private.h"
+				RelativePath="..\pixman-private.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman-version.h"
+				RelativePath="..\pixman-version.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\pixman.h"
+				RelativePath="..\pixman.h"
 				>
 			</File>
 		</Filter>
