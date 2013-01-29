@@ -14,7 +14,8 @@ Debug builds: /MTd and /Z7 enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Windows XP SP2 or newer
 
-TODO List:
+Library (and TODO) list:
+expat 2.1.0
 freetype 2.4.11
 libjpeg 9
 libmad 0.15.1b

@@ -2,6 +2,7 @@ Please see the LICENSE or COPYING file in the directories of the individual
 library.
 
 In short:
+expat: MIT
 Freetype: FreeType License or GPLv2 or later (see docs/LICENSE.TXT)
 libjpeg: Custom license (see README "LEGAL ISSUES" section)
 libmad: GPLv2 or later
