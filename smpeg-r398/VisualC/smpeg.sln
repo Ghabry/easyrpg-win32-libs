@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtv", "gtv\gtv.vcproj", "{D1594242-3D8F-41AE-934B-3464E0D7FAAC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plaympeg", "plaympeg\plaympeg.vcproj", "{D60A483E-7607-45EA-AFBC-E8F38A7B99EA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smpeg", "smpeg.vcproj", "{B628C649-2F5B-4315-A1A7-C9F2E86B8057}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1594242-3D8F-41AE-934B-3464E0D7FAAC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D1594242-3D8F-41AE-934B-3464E0D7FAAC}.Debug|Win32.Build.0 = Debug|Win32
+		{D1594242-3D8F-41AE-934B-3464E0D7FAAC}.Release|Win32.ActiveCfg = Release|Win32
+		{D1594242-3D8F-41AE-934B-3464E0D7FAAC}.Release|Win32.Build.0 = Release|Win32
+		{D60A483E-7607-45EA-AFBC-E8F38A7B99EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D60A483E-7607-45EA-AFBC-E8F38A7B99EA}.Debug|Win32.Build.0 = Debug|Win32
+		{D60A483E-7607-45EA-AFBC-E8F38A7B99EA}.Release|Win32.ActiveCfg = Release|Win32
+		{D60A483E-7607-45EA-AFBC-E8F38A7B99EA}.Release|Win32.Build.0 = Release|Win32
+		{B628C649-2F5B-4315-A1A7-C9F2E86B8057}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B628C649-2F5B-4315-A1A7-C9F2E86B8057}.Debug|Win32.Build.0 = Debug|Win32
+		{B628C649-2F5B-4315-A1A7-C9F2E86B8057}.Release|Win32.ActiveCfg = Release|Win32
+		{B628C649-2F5B-4315-A1A7-C9F2E86B8057}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

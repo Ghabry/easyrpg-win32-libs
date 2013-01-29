@@ -1,0 +1,17 @@
+/vs2005
+/dx5sdk
+*.ncb
+*.suo
+*.user
+bin
+tmp
+Debug
+Debug_*
+*_Debug
+Release
+Release_*
+*_release
+release_mt
+*UpgradeLog*xml
+*_UpgradeReport_Files*
+*.sln.old

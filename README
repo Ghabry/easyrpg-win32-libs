@@ -14,7 +14,10 @@ Debug builds: /MTd and /Z7 enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Windows XP SP2 or newer
 
-Library (and TODO) list:
+Compiling SDL needs the DirectX 5 SDK. I'm not sure about the license, so you
+have to find it by yourself. If found extract it in a folder called "dx5sdk".
+
+Library list:
 expat 2.1.0
 freetype 2.4.11
 libjpeg 9
@@ -31,3 +34,6 @@ SDL_mixer 1.2.12
 SDL_ttf 2.0.11
 smpeg r398
 zlib 1.2.7
+
+TODO:
+Build script for VS2010 (Debug and Release)
