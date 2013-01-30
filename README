@@ -6,7 +6,7 @@ VS2005 (Only release build is maintained):
 /O2 and /MT enabled.
 CPU requirements: Intel Pentium or newer (you probably have this)
 The only exception is pixman_mmx which was compiled with MMX support.
-CPU requirements for MMX: Intel Pentium 2 or newer, AMD Athlon XP or newer
+CPU requirements for MMX: Intel Pentium 2 or newer, AMD K6 or newer
 OS requirements: Win98 or newer
 
 VS2010: (Target v100 runtime by default)
