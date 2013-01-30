@@ -1,4 +1,9 @@
 @echo off
+msbuild.exe /? >NUL 2>&1 || (
+  echo ERROR This must be run from a Visual Studio Command Prompt.
+  pause
+  goto :EOF
+)
 echo EasyRPG VS2005 Library Build System
 IF NOT EXIST dx5sdk/include/ddraw.h goto :DXERR
 IF NOT EXIST dx5sdk/lib/dxguid.lib goto :DXERR
@@ -19,6 +24,7 @@ msbuild libpng-1.5.14\projects\visualc71\libpng.sln /p:configuration=LIB_Release
 msbuild libvorbis-1.3.3\win32\VS2005\vorbis_static.sln /p:configuration=Release /t:libvorbis
 msbuild libvorbis-1.3.3\win32\VS2005\vorbis_static.sln /p:configuration=Release /t:libvorbisfile
 msbuild pixman-0.28.2\pixman\pixman\pixman.sln /p:configuration=Release
+msbuild pixman-0.28.2\pixman\pixman\pixman.sln /p:configuration=Release_MMX
 msbuild SDL-1.2.15\VisualC\SDL.sln /p:configuration=Release
 msbuild SDL_image-1.2.12\VisualC\SDL_image.sln /p:configuration=Release /t:SDL_image
 msbuild SDL_mixer-1.2.12\VisualC\SDL_mixer.sln /p:configuration=Release /t:native_midi

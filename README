@@ -3,9 +3,10 @@ for Visual Studio easily.
 
 Provided build types:
 VS2005 (Only release build is maintained):
-/O2 and /MT enabled. Optional option: /arch:SSE
+/O2 and /MT enabled.
 CPU requirements: Intel Pentium or newer (you probably have this)
-CPU requirements for SSE: Intel Pentium 3 or newer, AMD Athlon XP or newer
+The only exception is pixman_mmx which was compiled with MMX support.
+CPU requirements for MMX: Intel Pentium 2 or newer, AMD Athlon XP or newer
 OS requirements: Win98 or newer
 
 VS2010: (Target v100 runtime by default)
@@ -25,12 +26,12 @@ libmad 0.15.1b
 libogg 1.3.0
 libpng 1.5.14
 libvorbis 1.3.3
-libvorbisfile 1.3.3
+libvorbisfile 1.3.3 (included with libvorbis)
 native_midi (included with SDL_mixer)
 Pixman 0.28.2
 SDL 1.2.15
 SDL_image 1.2.12
-SDL_mixer 1.2.12
+SDL_mixer 1.2.12 (WAV, MOD, MP3 and MID support)
 SDL_ttf 2.0.11
 smpeg r398
 zlib 1.2.7
