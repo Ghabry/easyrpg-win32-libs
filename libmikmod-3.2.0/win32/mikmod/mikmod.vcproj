@@ -17,7 +17,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\..\..\vc2010\lib\$(PlatformShortName)\$(Configuration)\"
+			OutputDirectory="$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="1"
@@ -149,43 +149,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\drivers\drv_AF.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_aiff.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_aix.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_alsa.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_dart.c"
-				>
-			</File>
-			<File
 				RelativePath="..\..\drivers\drv_ds.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_esd.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_hp.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_mac.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_nas.c"
 				>
 			</File>
 			<File
@@ -193,43 +157,11 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\drivers\drv_oss.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_osx.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_pipe.c"
-				>
-			</File>
-			<File
 				RelativePath="..\..\drivers\drv_raw.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\drivers\drv_sam9407.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_sb.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_sgi.c"
-				>
-			</File>
-			<File
 				RelativePath="..\..\drivers\drv_stdout.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_sun.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\drivers\drv_ultra.c"
 				>
 			</File>
 			<File
@@ -241,7 +173,147 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\drivers\drv_wss.c"
+				RelativePath="..\..\loaders\load_669.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_amf.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_asy.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_dsm.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_far.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_gdm.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_gt2.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_imf.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_it.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_m15.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_med.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_mod.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_mtm.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_okt.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_s3m.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_stm.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_stx.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_ult.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_uni.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\loaders\load_xm.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mdreg.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mdriver.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mloader.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mlreg.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mlutil.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\mmio\mmalloc.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\mmio\mmerror.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\mmio\mmio.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mplayer.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\munitrk.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\mwav.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\npertab.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\sloader.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\virtch.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\virtch2.c"
+				>
+			</File>
+			<File
+				RelativePath="..\..\playercode\virtch_common.c"
 				>
 			</File>
 		</Filter>
