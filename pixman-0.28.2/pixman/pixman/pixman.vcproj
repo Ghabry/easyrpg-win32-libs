@@ -218,6 +218,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\pixman-arm.c"
+				>
+			</File>
+			<File
 				RelativePath="..\pixman-bits-image.c"
 				>
 			</File>
@@ -246,6 +250,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\pixman-general.c"
+				>
+			</File>
+			<File
 				RelativePath="..\pixman-glyph.c"
 				>
 			</File>
@@ -270,7 +278,19 @@
 				>
 			</File>
 			<File
+				RelativePath="..\pixman-mips.c"
+				>
+			</File>
+			<File
+				RelativePath="..\pixman-mmx.c"
+				>
+			</File>
+			<File
 				RelativePath="..\pixman-noop.c"
+				>
+			</File>
+			<File
+				RelativePath="..\pixman-ppc.c"
 				>
 			</File>
 			<File
