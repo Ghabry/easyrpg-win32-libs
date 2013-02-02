@@ -37,5 +37,4 @@ smpeg r398
 zlib 1.2.7
 
 TODO:
-- VS2010 64 Bit (e.g. libmad is incompatible)
 - Testing the result ;)
