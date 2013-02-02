@@ -1,10 +1,10 @@
 @echo off
+echo EasyRPG VS2010 Library Build System
 msbuild.exe /? >NUL 2>&1 || (
-  echo ERROR This must be run from a Visual Studio Command Prompt.
+  echo ERROR: This must be run from a Visual Studio Command Prompt.
   pause
   goto :EOF
 )
-echo EasyRPG VS2005 Library Build System
 IF NOT EXIST dx5sdk/include/ddraw.h goto :DXERR
 IF NOT EXIST dx5sdk/lib/dxguid.lib goto :DXERR
 goto :NOERR
