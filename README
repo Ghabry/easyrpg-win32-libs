@@ -15,8 +15,9 @@ Debug builds: /MTd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Windows XP SP2 or newer
 
-Compiling SDL needs the DirectX 5 SDK. I'm not sure about the license, so you
-have to find it by yourself. If found extract it in a folder called "dx5sdk".
+Compiling SDL and Mikmod needs the DirectX 5 SDK. I'm not sure about the
+license, so you have to find it by yourself. If found extract it in a folder
+called "dx5sdk".
 
 Open a Visual Studio Command Prompt (32 or 64bit) and execute build_vs2005.cmd
 or build_vs2010.cmd

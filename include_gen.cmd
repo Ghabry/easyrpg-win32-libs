@@ -21,6 +21,7 @@ xcopy expat-2.1.0\lib\expat*.h %1\include
 xcopy /S freetype-2.4.11\include %1\include
 xcopy jpeg-9\j*.h %1\include
 xcopy libmad-0.15.1b\*.h %1\include
+xcopy libmikmod-3.2.0\include\*.h %1\include
 xcopy /I libogg-1.3.0\include\ogg\*.h %1\include\ogg
 xcopy libpng-1.5.14\*.h %1\include
 xcopy /I libvorbis-1.3.3\include\vorbis\*.h %1\include\vorbis
