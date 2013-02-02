@@ -25,7 +25,7 @@ xcopy /I libogg-1.3.0\include\ogg\*.h %1\include\ogg
 xcopy libpng-1.5.14\*.h %1\include
 xcopy /I libvorbis-1.3.3\include\vorbis\*.h %1\include\vorbis
 xcopy pixman-0.28.2\pixman\pixman*.h %1\include
-xcopy SDL-1.2.15\include\SDL_*.h %1\include
+xcopy SDL-1.2.15\include\*.h %1\include
 xcopy SDL_image-1.2.12\SDL_*.h %1\include
 xcopy SDL_mixer-1.2.12\SDL_*.h %1\include
 xcopy SDL_ttf-2.0.11\SDL_*.h %1\include
