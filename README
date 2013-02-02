@@ -18,6 +18,12 @@ OS requirements: Windows XP SP2 or newer
 Compiling SDL needs the DirectX 5 SDK. I'm not sure about the license, so you
 have to find it by yourself. If found extract it in a folder called "dx5sdk".
 
+Open a Visual Studio Command Prompt (32 or 64bit) and execute build_vs2005.cmd
+or build_vs2010.cmd
+The resulting files appear in vs2005 or vs2010 respectively.
+Please note that the boost (http://www.boost.org/) headers are not included
+because of their gigantic filesize. 
+
 Library list:
 expat 2.1.0
 freetype 2.4.11
