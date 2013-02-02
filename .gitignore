@@ -1,4 +1,5 @@
 /vs2005
+/vs2010
 /dx5sdk
 *.ncb
 *.suo
@@ -15,3 +16,8 @@ release_mt
 *UpgradeLog*xml
 *_UpgradeReport_Files*
 *.sln.old
+*.opensdf
+*.sdf
+*.suo.old
+ipch/
+*.cache

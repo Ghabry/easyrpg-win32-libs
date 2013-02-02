@@ -10,8 +10,8 @@ CPU requirements for MMX: Intel Pentium 2 or newer, AMD K6 or newer
 OS requirements: Win98 or newer
 
 VS2010: (Target v100 runtime by default)
-Release builds: /O2, /MT and /arch:SSE2 enabled.
-Debug builds: /MTd and /Z7 enabled.
+Release builds: /O2, /MT, /Zi and /arch:SSE2 enabled.
+Debug builds: /MTd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Windows XP SP2 or newer
 
@@ -37,4 +37,5 @@ smpeg r398
 zlib 1.2.7
 
 TODO:
-Build script for VS2010 (Debug and Release)
+- VS2010 64 Bit (e.g. libmad is incompatible)
+- Testing the result ;)
