@@ -6,6 +6,7 @@ expat: MIT
 Freetype: FreeType License or GPLv2 or later (see docs/LICENSE.TXT)
 libjpeg: Custom license (see README "LEGAL ISSUES" section)
 libmad: GPLv2 or later
+libmikmod: LGPLv2.1 or later
 libogg: BSD
 libpng: zlib
 libvorbis: BSD
