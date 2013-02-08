@@ -103,7 +103,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\;..\..\;..\..\include;..\..\..\dx5sdk\include"
+				AdditionalIncludeDirectories="..\;..\..\;..\..\include;..\..\..\dxsdk\include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;DRV_DS;DRV_WIN;HAVE_FCNTL_H;HAVE_MALLOC_H;HAVE_LIMITS_H"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"

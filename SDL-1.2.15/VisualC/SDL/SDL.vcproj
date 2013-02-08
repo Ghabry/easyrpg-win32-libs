@@ -47,7 +47,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\..\include;..\..\..\dx5sdk\include"
+				AdditionalIncludeDirectories="..\..\include;..\..\..\dxsdk\include"
 				PreprocessorDefinitions="NDEBUG;_WINDOWS;_WIN32_WINNT=0x0400"
 				StringPooling="true"
 				RuntimeLibrary="0"
