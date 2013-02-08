@@ -30,5 +30,5 @@ xcopy SDL-1.2.15\include\*.h %1\include
 xcopy SDL_image-1.2.12\SDL_*.h %1\include
 xcopy SDL_mixer-1.2.12\SDL_*.h %1\include
 xcopy SDL_ttf-2.0.11\SDL_*.h %1\include
-xcopy smpeg-r398\*.h %1\include
+xcopy shinonome\*.hxx %1\include
 xcopy zlib-1.2.7\z*.h %1\include
