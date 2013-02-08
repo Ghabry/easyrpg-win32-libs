@@ -5,15 +5,7 @@ msbuild.exe /? >NUL 2>&1 || (
   pause
   goto :EOF
 )
-IF NOT EXIST dx5sdk/include/ddraw.h goto :DXERR
-IF NOT EXIST dx5sdk/lib/dxguid.lib goto :DXERR
-goto :NOERR
 
-:DXERR
-echo ERROR: dx5sdk not found
-goto :EOF
-
-:NOERR
 @echo on
 msbuild expat-2.1.0\expat.sln /t:expatw_static /p:configuration=release || goto :EOF
 msbuild freetype-2.4.11\builds\win32\vc2005\freetype.sln /p:configuration=LIB_Release_Multithreaded || goto :EOF

@@ -5,13 +5,6 @@ msbuild.exe /? >NUL 2>&1 || (
   pause
   goto :EOF
 )
-IF NOT EXIST dx5sdk/include/ddraw.h goto :DXERR
-IF NOT EXIST dx5sdk/lib/dxguid.lib goto :DXERR
-goto :NOERR
-
-:DXERR
-echo ERROR: dx5sdk not found
-goto :EOF
 
 :NOERR
 @echo on
