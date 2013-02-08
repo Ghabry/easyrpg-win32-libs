@@ -1,6 +1,5 @@
 /vs2005
 /vs2010
-/dx5sdk
 *.ncb
 *.suo
 *.user
