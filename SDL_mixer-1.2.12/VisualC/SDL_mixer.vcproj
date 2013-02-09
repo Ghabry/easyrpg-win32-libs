@@ -147,7 +147,8 @@
 				StringPooling="true"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Release/SDL_mixer.pch"
+				PrecompiledHeaderFile="$(IntDir)\SDL_mixer.pch"
+				AssemblerListingLocation="$(IntDir)\"
 				WarningLevel="3"
 			/>
 			<Tool

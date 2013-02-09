@@ -144,7 +144,8 @@
 				StringPooling="true"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
-				PrecompiledHeaderFile=".\Release/SDL_image.pch"
+				PrecompiledHeaderFile="$(IntDir)\SDL_image.pch"
+				AssemblerListingLocation="$(IntDir)\"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 			/>

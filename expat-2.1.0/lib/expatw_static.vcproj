@@ -48,9 +48,9 @@
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				PrecompiledHeaderFile=".\..\win32\tmp\Release-w_static/expatw_static.pch"
-				AssemblerListingLocation=".\..\win32\tmp\Release-w_static/"
-				ObjectFile=".\..\win32\tmp\Release-w_static/"
-				ProgramDataBaseFileName=".\..\win32\tmp\Release-w_static/"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(IntDir)\"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
 			/>

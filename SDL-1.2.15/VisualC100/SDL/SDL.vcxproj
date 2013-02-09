@@ -101,9 +101,9 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\Release/SDL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Release/$(PlatformShortName)\</AssemblerListingLocation>
-      <ObjectFileName>.\Release/$(PlatformShortName)\</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\SDL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -136,9 +136,9 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\Release/SDL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Release/$(PlatformShortName)\</AssemblerListingLocation>
-      <ObjectFileName>.\Release/$(PlatformShortName)\</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\SDL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -170,9 +170,9 @@
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_WIN32_WINNT=0x0400;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\Debug/SDL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Debug/$(PlatformShortName)\</AssemblerListingLocation>
-      <ObjectFileName>.\Debug/$(PlatformShortName)\</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\SDL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -211,9 +211,9 @@
       <AdditionalIncludeDirectories>..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_WIN32_WINNT=0x0400;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\Debug/SDL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\Debug/$(PlatformShortName)\</AssemblerListingLocation>
-      <ObjectFileName>.\Debug/$(PlatformShortName)\</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\SDL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>

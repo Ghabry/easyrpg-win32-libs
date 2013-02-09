@@ -95,9 +95,9 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\..\win32\tmp\Release-w_static/expatw_static.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\win32\tmp\Release-w_static/</AssemblerListingLocation>
-      <ObjectFileName>.\..\win32\tmp\Release-w_static/</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\expatw_static.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)libexpat.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -125,9 +125,9 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\..\win32\tmp\Release-w_static/expatw_static.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\win32\tmp\Release-w_static/</AssemblerListingLocation>
-      <ObjectFileName>.\..\win32\tmp\Release-w_static/</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\expatw_static.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)libexpat.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -153,9 +153,9 @@
       <PreprocessorDefinitions>WIN32;XML_STATIC;_DEBUG;_WINDOWS;_LIB;COMPILED_FROM_DSP;XML_UNICODE_WCHAR_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\..\win32\tmp\Debug-w_static/expatw_static.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\win32\tmp\Debug-w_static/</AssemblerListingLocation>
-      <ObjectFileName>.\..\win32\tmp\Debug-w_static/</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\expatw_static.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)libexpat.pdb</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level3</WarningLevel>
@@ -181,9 +181,9 @@
       <PreprocessorDefinitions>WIN32;XML_STATIC;_DEBUG;_WINDOWS;_LIB;COMPILED_FROM_DSP;XML_UNICODE_WCHAR_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\..\win32\tmp\Debug-w_static/expatw_static.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\win32\tmp\Debug-w_static/</AssemblerListingLocation>
-      <ObjectFileName>.\..\win32\tmp\Debug-w_static/</ObjectFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)\expatw_static.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)\</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)libexpat.pdb</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level3</WarningLevel>
