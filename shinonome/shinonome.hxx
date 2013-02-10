@@ -3,15 +3,13 @@
 
 typedef unsigned short uint16_t;
 
-extern "C" {
+struct ShinonomeGlyph {
+	uint16_t code;
+	bool is_full;
+	uint16_t data[12];
+};
 
-extern uint16_t const SHINONOME_LATIN1[0x100][12];
-extern uint16_t const SHINONOME_HANKAKU[0x100][12];
-
-extern uint16_t const SHINONOME_GOTHIC[94][94][12];
-extern uint16_t const SHINONOME_MINCHO[94][94][12];
-
-}
+extern ShinonomeGlyph const SHINONOME_GOTHIC[7187];
+extern ShinonomeGlyph const SHINONOME_MINCHO[488];
 
 #endif // _INC_SHINONOME_HXX_
-

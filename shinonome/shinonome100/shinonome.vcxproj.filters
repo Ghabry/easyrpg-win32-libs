@@ -14,12 +14,6 @@
     <ClCompile Include="..\gothic.cxx">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\hankaku.cxx">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\latin1.cxx">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\mincho.cxx">
       <Filter>Quelldateien</Filter>
     </ClCompile>

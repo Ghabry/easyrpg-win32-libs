@@ -151,14 +151,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\hankaku.cxx"
-				>
-			</File>
-			<File
-				RelativePath="..\latin1.cxx"
-				>
-			</File>
-			<File
 				RelativePath="..\mincho.cxx"
 				>
 			</File>

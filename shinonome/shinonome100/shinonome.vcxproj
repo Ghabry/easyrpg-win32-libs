@@ -137,8 +137,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\gothic.cxx" />
-    <ClCompile Include="..\hankaku.cxx" />
-    <ClCompile Include="..\latin1.cxx" />
     <ClCompile Include="..\mincho.cxx" />
   </ItemGroup>
   <ItemGroup>
