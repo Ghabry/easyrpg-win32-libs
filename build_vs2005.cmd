@@ -23,7 +23,6 @@ msbuild SDL_image-1.2.12\VisualC\SDL_image.sln /p:configuration=Release /t:SDL_i
 msbuild SDL_mixer-1.2.12\VisualC\SDL_mixer.sln /p:configuration=Release /t:native_midi || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC\SDL_ttf.sln /p:configuration=Release /t:SDL_ttf || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC\SDL_ttf.sln /p:configuration=Release /t:SDL_ttf || goto :EOF
-msbuild shinonome\shinonome\shinonome.sln /p:configuration=Release || goto :EOF
 msbuild zlib-1.2.7\win32\zlib\zlib.sln /p:configuration=Release || goto :EOF
 
 include_gen.cmd vs2005

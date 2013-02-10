@@ -16,5 +16,4 @@ SDL: LPGLv2.1 or later
 SDL image: zlib
 SDL mixer: zlib
 SDL ttf: zlib
-shinonome: Public Domain
 zlib: zlib

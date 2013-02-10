@@ -23,7 +23,6 @@ msbuild SDL_image-1.2.12\VisualC100\SDL_image.sln /p:configuration=Debug /t:SDL_
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Debug /t:native_midi || goto :EOF
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Debug /t:SDL_mixer || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC100\SDL_ttf.sln /p:configuration=Debug /t:SDL_ttf || goto :EOF
-msbuild shinonome\shinonome100\shinonome.sln /p:configuration=Debug || goto :EOF
 msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Debug || goto :EOF
 
 msbuild expat-2.1.0\expat100.sln /t:expatw_static /p:configuration=Release || goto :EOF
@@ -41,7 +40,6 @@ msbuild SDL_image-1.2.12\VisualC100\SDL_image.sln /p:configuration=Release /t:SD
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Release /t:native_midi || goto :EOF
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Release /t:SDL_mixer || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC100\SDL_ttf.sln /p:configuration=Release /t:SDL_ttf || goto :EOF
-msbuild shinonome\shinonome100\shinonome.sln /p:configuration=Release || goto :EOF
 msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Release || goto :EOF
 
 include_gen.cmd vs2010
