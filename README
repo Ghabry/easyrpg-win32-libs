@@ -1,27 +1,77 @@
 This repo provides build files to compile the libs used by the EasyRPG project
 for Visual Studio easily.
 
-Provided build types:
-VS2005 (Only release build is maintained):
+How to compile
+==============
+
+VS2005
+------
+
+Open a Visual Studio Command Prompt (32 bit) and execute build_vs2005.cmd
+
+The default target toolset is v80. To alter this pass the toolset name as a
+command line argument.
+Using other toolsets is unsupported!
+Before recompiling with another toolset it's recommended to delete all
+temporary files (all files that are not under version control) because they
+can cause conflicts.
+
+Note that only the release build is maintained!
+
+Compiler flags and requirements:
 /O2 and /MT enabled.
 CPU requirements: Intel Pentium or newer (you probably have this)
 The only exception is pixman_mmx which was compiled with MMX support.
 CPU requirements for MMX: Intel Pentium 2 or newer, AMD K6 or newer
 OS requirements: Win98 or newer
 
-VS2010: (Target v100 runtime by default)
+VS2010
+------
+
+Open a Visual Studio Command Prompt (32 or 64bit) and execute build_vs2010.cmd
+
+The default target toolset is v100. To alter this pass the toolset name as a
+command line argument.
+Using other toolsets is unsupported!
+Before recompiling with another toolset it's recommended to delete all
+temporary files (all files that are not under version control) because they
+can cause conflicts.
+
+Compiler flags and requirements:
 Release builds: /O2, /MT, /Zi and /arch:SSE2 enabled.
 Debug builds: /MTd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Windows XP SP2 or newer
 
-Open a Visual Studio Command Prompt (32 or 64bit) and execute build_vs2005.cmd
-or build_vs2010.cmd
-The resulting files appear in vs2005 or vs2010 respectively.
-Please note that the boost (http://www.boost.org/) headers are not included
-because of their gigantic filesize. 
+Common toolsets
+---------------
 
-Library list:
+Command line arguments for the target toolset (assuming that the toolset is
+installed):
+v80 - Visual Studio 2005
+v90 - Visual Studio 2008
+v100 - Visual Studio 2010
+v110 - Visual Studio 2012
+v110_xp - Visual Studio 2012 with Windows XP support
+windows7.1sdk - Windows 7.1 SDK (compiler same as v100)
+
+After compiling
+===============
+The resulting files appear in vs2005 or vs2010 respectively.
+The boost (http://www.boost.org/) headers are not included because of their
+gigantic filesize.
+The boost folder must be placed in vs20xx/include/boost
+
+You must also set the environment variable EASYDEV_MSVC2005 (for vs2005) or
+EASYDEV_MSVC (for vs2010) to the output folder (vs2005 or vs2010) otherwise
+the EasyRPG project file can't find the libraries.
+To create new environment variables enter the "Windows Control Panel" and
+select "System" (or enter "environment variable" in the search field).
+Sometimes new environment variables are not detected. Logout and -in again in
+order to fix this.
+
+Library list
+============
 DirectX SDK (February 2010)
 expat 2.1.0
 freetype 2.4.11
@@ -41,4 +91,4 @@ SDL_ttf 2.0.11
 zlib 1.2.7
 
 TODO:
-- Testing the result ;)
+- Testing vs2005
