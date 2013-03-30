@@ -88,7 +88,5 @@ SDL 1.2.15
 SDL_image 1.2.12 (BMP, GIF, JPG, PNG support)
 SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
 SDL_ttf 2.0.11
+stdint.h (in misc folder, for VS2005)
 zlib 1.2.7
-
-TODO:
-- Testing vs2005

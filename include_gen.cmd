@@ -31,6 +31,7 @@ xcopy /Y SDL_ttf-2.0.11\SDL_*.h %1\include
 xcopy /Y zlib-1.2.7\z*.h %1\include
 
 if %1==vs2005 (
+  xcopy /Y /I misc %1\include
   xcopy /Y /I dxsdk\lib\x86 %1\lib\release
 )
 
