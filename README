@@ -90,3 +90,9 @@ SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
 SDL_ttf 2.0.11
 stdint.h (in misc folder, for VS2005)
 zlib 1.2.7
+
+Additional notes
+================
+
+Pixman was slightly modified to integrate in the build system better:
+See lines 94 to 104 in pixman.h (affects only VS2005 builds)
