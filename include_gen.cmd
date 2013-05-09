@@ -23,7 +23,7 @@ xcopy /Y libmikmod-3.2.0\include\*.h %1\include
 xcopy /Y /I libogg-1.3.0\include\ogg\*.h %1\include\ogg
 xcopy /Y libpng-1.5.14\*.h %1\include
 xcopy /Y /I libvorbis-1.3.3\include\vorbis\*.h %1\include\vorbis
-xcopy /Y pixman-0.30-0\pixman\pixman*.h %1\include
+xcopy /Y pixman-0.30.0\pixman\pixman*.h %1\include
 xcopy /Y SDL-1.2.15\include\*.h %1\include
 xcopy /Y SDL_image-1.2.12\SDL_*.h %1\include
 xcopy /Y SDL_mixer-1.2.12\SDL_*.h %1\include

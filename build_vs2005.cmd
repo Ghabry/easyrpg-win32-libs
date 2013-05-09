@@ -24,8 +24,8 @@ msbuild libogg-1.3.0\win32\VS2005\libogg_static.sln /p:configuration=Release /p:
 msbuild libpng-1.5.14\projects\visualc71\libpng.sln /p:configuration=LIB_Release /t:libpng /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild libvorbis-1.3.3\win32\VS2005\vorbis_static.sln /p:configuration=Release /t:libvorbis /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild libvorbis-1.3.3\win32\VS2005\vorbis_static.sln /p:configuration=Release /t:libvorbisfile /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
-msbuild pixman-0.30-0\pixman\pixman\pixman.sln /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
-msbuild pixman-0.30-0\pixman\pixman\pixman.sln /p:configuration=Release_MMX /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild pixman-0.30.0\pixman\pixman\pixman.sln /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild pixman-0.30.0\pixman\pixman\pixman.sln /p:configuration=Release_MMX /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL-1.2.15\VisualC\SDL.sln /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_image-1.2.12\VisualC\SDL_image.sln /p:configuration=Release /t:SDL_image /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_mixer-1.2.12\VisualC\SDL_mixer.sln /p:configuration=Release /t:native_midi /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
