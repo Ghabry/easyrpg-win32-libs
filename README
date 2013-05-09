@@ -83,7 +83,7 @@ libpng 1.5.14
 libvorbis 1.3.3
 libvorbisfile 1.3.3 (included with libvorbis)
 native_midi (included with SDL_mixer)
-Pixman 0.28.2
+Pixman 0.30.0
 SDL 1.2.15
 SDL_image 1.2.12 (BMP, GIF, JPG, PNG support)
 SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
