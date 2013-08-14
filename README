@@ -1,6 +1,8 @@
 This repo provides build files to compile the libs used by the EasyRPG project
 for Visual Studio easily.
 
+The SDL2 libs only support the VS2010 compiler!
+
 How to compile
 ==============
 
@@ -88,6 +90,10 @@ SDL 1.2.15
 SDL_image 1.2.12 (BMP, GIF, JPG, PNG support)
 SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
 SDL_ttf 2.0.11
+SDL2-2.0.0
+SDL2_image-2.0.0
+SDL2_mixer-2.0.0
+SDL2_ttf-2.0.0
 stdint.h (in misc folder, for VS2005)
 zlib 1.2.7
 

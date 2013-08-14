@@ -20,3 +20,4 @@ release_mt
 *.suo.old
 ipch/
 *.cache
+/dx5sdk
