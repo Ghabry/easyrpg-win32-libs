@@ -215,10 +215,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Library Include="..\..\SDL\$(Platform)\$(Configuration)\SDL2.lib" />
-    <Library Include="..\..\SDLmain\$(Platform)\$(Configuration)\SDL2main.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\test\testjoystick.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
