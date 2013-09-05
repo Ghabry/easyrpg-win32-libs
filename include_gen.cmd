@@ -24,18 +24,26 @@ xcopy /Y /I libogg-1.3.0\include\ogg\*.h %1\include\ogg
 xcopy /Y libpng-1.5.14\*.h %1\include
 xcopy /Y /I libvorbis-1.3.3\include\vorbis\*.h %1\include\vorbis
 xcopy /Y pixman-0.30.0\pixman\pixman*.h %1\include
-xcopy /Y SDL-1.2.15\include\*.h %1\include
-xcopy /Y SDL_image-1.2.12\SDL_*.h %1\include
-xcopy /Y SDL_mixer-1.2.12\SDL_*.h %1\include
-xcopy /Y SDL_ttf-2.0.11\SDL_*.h %1\include
 xcopy /Y zlib-1.2.7\z*.h %1\include
 
 if %1==vs2005 (
+  xcopy /Y SDL-1.2.15\include\*.h %1\include\SDL1_2\
+  xcopy /Y SDL_image-1.2.12\SDL_*.h %1\include\SDL1_2
+  xcopy /Y SDL_mixer-1.2.12\SDL_*.h %1\include\SDL1_2
+  xcopy /Y SDL_ttf-2.0.11\SDL_*.h %1\include\SDL1_2
   xcopy /Y /I misc %1\include
   xcopy /Y /I dxsdk\lib\x86 %1\lib\release
 )
 
 if %1==vs2010 (
+  xcopy /Y SDL-1.2.15\include\*.h %1\include\SDL1_2\
+  xcopy /Y SDL_image-1.2.12\SDL_*.h %1\include\SDL1_2
+  xcopy /Y SDL_mixer-1.2.12\SDL_*.h %1\include\SDL1_2
+  xcopy /Y SDL_ttf-2.0.11\SDL_*.h %1\include\SDL1_2
+  xcopy /Y SDL2-2.0.0\include\*.h %1\include\SDL2\
+  xcopy /Y SDL2_image-2.0.0\SDL_*.h %1\include\SDL2
+  xcopy /Y SDL2_mixer-2.0.0\SDL_*.h %1\include\SDL2
+  xcopy /Y SDL2_ttf-2.0.12\SDL_*.h %1\include\SDL2
   xcopy /Y /I dxsdk\lib\x86 %1\lib\x86\debug
   xcopy /Y /I dxsdk\lib\x86 %1\lib\x86\release
   xcopy /Y /I dxsdk\lib\amd64 %1\lib\amd64\debug

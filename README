@@ -102,3 +102,4 @@ Additional notes
 
 Pixman was slightly modified to integrate in the build system better:
 See lines 94 to 104 in pixman.h (affects only VS2005 builds)
+SDL_stdint.c of SDL2 was modified to integrate in the build system better.

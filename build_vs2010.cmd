@@ -30,7 +30,13 @@ msbuild SDL_image-1.2.12\VisualC100\SDL_image.sln /p:configuration=Debug /t:SDL_
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Debug /t:native_midi /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Debug /t:SDL_mixer /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC100\SDL_ttf.sln /p:configuration=Debug /t:SDL_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
-msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Debug /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2-2.0.0\VisualC\SDL_VS2010.sln /p:configuration=Debug /t:SDL2 /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2-2.0.0\VisualC\SDL_VS2010.sln /p:configuration=Debug /t:SDL2main /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_image-2.0.0\VisualC\SDL_image_VS2010.sln /p:configuration=Debug /t:SDL2_image /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Debug /t:native_midi /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Debug /t:SDL2_mixer /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_ttf-2.0.12\VisualC\SDL_ttf_VS2010.sln /p:configuration=Debug /t:SDL2_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild zlib-1.2.7\win32\zlib100\zlib.sln /t:Build /p:configuration=Debug /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 
 msbuild expat-2.1.0\expat100.sln /t:expatw_static /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild freetype-2.4.11\builds\win32\vc2010\freetype.sln /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
@@ -47,6 +53,12 @@ msbuild SDL_image-1.2.12\VisualC100\SDL_image.sln /p:configuration=Release /t:SD
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Release /t:native_midi /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_mixer-1.2.12\VisualC100\SDL_mixer.sln /p:configuration=Release /t:SDL_mixer /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild SDL_ttf-2.0.11\VisualC100\SDL_ttf.sln /p:configuration=Release /t:SDL_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2-2.0.0\VisualC\SDL_VS2010.sln /p:configuration=Release /t:SDL2 /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2-2.0.0\VisualC\SDL_VS2010.sln /p:configuration=Release /t:SDL2main /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_image-2.0.0\VisualC\SDL_image_VS2010.sln /p:configuration=Release /t:SDL2_image /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Release /t:native_midi /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Release /t:SDL2_mixer /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild SDL2_ttf-2.0.12\VisualC\SDL_ttf_VS2010.sln /p:configuration=Release /t:SDL2_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 
 include_gen.cmd vs2010
