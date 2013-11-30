@@ -1,52 +1,21 @@
 This repo provides build files to compile the libs used by the EasyRPG project
 for Visual Studio easily.
 
-The SDL2 libs only support the VS2010 compiler!
-
 How to compile
 ==============
 
-VS2005
-------
-
-Open a Visual Studio Command Prompt (32 bit) and execute build_vs2005.cmd
-
-The default target toolset is v80. To alter this pass the toolset name as a
-command line argument.
-Using other toolsets is unsupported!
-Before recompiling with another toolset it's recommended to delete all
-temporary files (all files that are not under version control) because they
-can cause conflicts.
-
-Note that only the release build is maintained!
-
-Compiler flags and requirements:
-/O2 and /MT enabled.
-CPU requirements: Intel Pentium or newer (you probably have this)
-The only exception is pixman_mmx which was compiled with MMX support.
-CPU requirements for MMX: Intel Pentium 2 or newer, AMD K6 or newer
-OS requirements: Win98 or newer
-
-VS2010
-------
-
-Open a Visual Studio Command Prompt (32 or 64bit) and execute build_vs2010.cmd
-
-The default target toolset is v100. To alter this pass the toolset name as a
-command line argument.
-Using other toolsets is unsupported!
-Before recompiling with another toolset it's recommended to delete all
-temporary files (all files that are not under version control) because they
-can cause conflicts.
+Open a Visual Studio Command Prompt (32 or 64bit) and execute "build TOOLSET"
+Replace TOOLSET with one listed below (e.g. v100)
+The only official supported toolset is v100, but others should work, too.
 
 Compiler flags and requirements:
 Release builds: /O2, /MT, /Zi and /arch:SSE2 enabled.
 Debug builds: /MTd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
-OS requirements: Windows XP SP2 or newer
+OS requirements: Depending on the toolset, v100 needs Windows XP SP2 or newer
 
 Common toolsets
----------------
+===============
 
 Command line arguments for the target toolset (assuming that the toolset is
 installed):
@@ -55,18 +24,20 @@ v90 - Visual Studio 2008
 v100 - Visual Studio 2010
 v110 - Visual Studio 2012
 v110_xp - Visual Studio 2012 with Windows XP support
+v120 - Visual Studio 2013
+v120_xp - Visual Studio 2013 with Windows XP support
 windows7.1sdk - Windows 7.1 SDK (compiler same as v100)
 
 After compiling
 ===============
-The resulting files appear in vs2005 or vs2010 respectively.
+
+The resulting files appear in build\TOOLSET.
 The boost (http://www.boost.org/) headers are not included because of their
 gigantic filesize.
-The boost folder must be placed in vs20xx/include/boost
+The boost folder must be placed in build\include\boost.
 
-You must also set the environment variable EASYDEV_MSVC2005 (for vs2005) or
-EASYDEV_MSVC (for vs2010) to the output folder (vs2005 or vs2010) otherwise
-the EasyRPG project file can't find the libraries.
+You must also set the environment variable EASYDEV_MSVC to the "build" folder
+otherwise the EasyRPG project file can't find the libraries.
 To create new environment variables enter the "Windows Control Panel" and
 select "System" (or enter "environment variable" in the search field).
 Sometimes new environment variables are not detected. Logout and -in again in
@@ -101,5 +72,5 @@ Additional notes
 ================
 
 Pixman was slightly modified to integrate in the build system better:
-See lines 94 to 104 in pixman.h (affects only VS2005 builds)
-SDL_stdint.c of SDL2 was modified to integrate in the build system better.
+See lines 94 to 104 in pixman.h
+SDL_stdint.c of SDL2 was modified

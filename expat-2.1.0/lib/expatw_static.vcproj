@@ -16,7 +16,7 @@
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\vs2005\lib\Release"
+			OutputDirectory="..\..\build\$(PlatformToolset)\lib\Release"
 			IntermediateDirectory=".\..\win32\tmp\Release-w_static"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
