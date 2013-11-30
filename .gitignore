@@ -21,5 +21,6 @@ release_mt
 ipch/
 *.cache
 /dx5sdk
-mruby
-utf8proc-v1.1.5
+/mruby
+/utf8proc-*
+/build
