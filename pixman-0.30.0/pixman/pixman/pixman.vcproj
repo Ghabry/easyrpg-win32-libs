@@ -79,7 +79,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\..\build\$(PlatformToolset)\lib\Release"
+			OutputDirectory="..\..\..\build\lib\$(PlatformToolset)\Release"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="1"
@@ -140,7 +140,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release_MMX|Win32"
-			OutputDirectory="..\..\..\build\$(PlatformToolset)\lib\Release"
+			OutputDirectory="..\..\..\build\lib\$(PlatformToolset)\Release"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="1"

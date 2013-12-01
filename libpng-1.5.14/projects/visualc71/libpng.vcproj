@@ -251,7 +251,7 @@
 		</Configuration>
 		<Configuration
 			Name="LIB Release|Win32"
-			OutputDirectory="..\..\..\build\$(PlatformToolset)\lib\Release"
+			OutputDirectory="..\..\..\build\lib\$(PlatformToolset)\Release"
 			IntermediateDirectory=".\Win32_LIB_Release"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"

@@ -119,28 +119,28 @@
   </ImportGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\..\$(PlatformShortName)\objs\release\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\..\..\$(PlatformShortName)\objs\release\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">.\..\..\..\objs\release_mt\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">.\..\..\..\objs\release_mt\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">.\..\..\..\objs\release_st\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">.\..\..\..\objs\release_st\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\..\$(PlatformShortName)\objs\debug\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\..\..\$(PlatformShortName)\objs\debug\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">.\..\..\..\objs\debug_st\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">.\..\..\..\objs\debug_st\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">..\..\..\..\build\$(PlatformToolset)\lib\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">..\..\..\..\build\lib\$(PlatformToolset)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">.\..\..\..\objs\debug_mt\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|x64'">.\..\..\..\objs\debug_mt\</IntDir>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug Multithreaded|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>

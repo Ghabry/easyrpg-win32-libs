@@ -90,7 +90,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release_Multithreaded|Win32"
-			OutputDirectory="..\..\..\..\build\$(PlatformToolset)\lib\Release"
+			OutputDirectory="..\..\..\..\build\lib\$(PlatformToolset)\Release"
 			IntermediateDirectory=".\..\..\..\objs\release_mt"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
