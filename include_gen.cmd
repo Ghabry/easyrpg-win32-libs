@@ -1,15 +1,5 @@
 @echo off
 echo EasyRPG Include File Copier
-msbuild.exe /? >NUL 2>&1 || (
-  echo ERROR: This must be run from a Visual Studio Command Prompt.
-  pause
-  goto :EOF
-)
-
-if [%1]==[] (
-    echo ERROR: This script is used by build.cmd
-    goto :EOF
-)
 
 xcopy /Y /I expat-2.1.0\lib\expat*.h build\include
 xcopy /Y /S freetype-2.4.11\include build\include
@@ -29,7 +19,3 @@ xcopy /Y SDL2-2.0.0\include\*.h build\include\SDL2\
 xcopy /Y SDL2_image-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_mixer-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_ttf-2.0.12\SDL_*.h build\include\SDL2
-xcopy /Y /I dxsdk\lib\x86 build\%1\lib\x86\debug
-xcopy /Y /I dxsdk\lib\x86 build\%1\lib\x86\release
-xcopy /Y /I dxsdk\lib\amd64 build\%1\lib\amd64\debug
-xcopy /Y /I dxsdk\lib\amd64 build\%1\lib\amd64\release

@@ -1,6 +1,14 @@
 This repo provides build files to compile the libs used by the EasyRPG project
 for Visual Studio easily.
 
+Requirements
+============
+
+Any version of Visual Studio or Windows SDK (with compilers) installed.
+
+DirectX SDK. February 2010 is good enough:
+http://download.microsoft.com/download/F/1/7/F178BCE4-FA19-428F-BB60-F3DEE1130BFA/DXSDK_Feb10.exe
+
 How to compile
 ==============
 
@@ -45,7 +53,6 @@ order to fix this.
 
 Library list
 ============
-DirectX SDK (February 2010)
 expat 2.1.0
 freetype 2.4.11
 libjpeg 9

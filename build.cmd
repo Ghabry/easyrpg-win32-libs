@@ -8,7 +8,7 @@ msbuild.exe /? >NUL 2>&1 || (
 
 if [%1]==[] (
     echo ERROR: Please provide a platform toolset ^(see README^)
-    goto :EOF/t:Clean;Build
+    goto :EOF
 )
 
 set TARGETTOOLSET=%1
@@ -62,4 +62,4 @@ msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Release /
 msbuild SDL2_ttf-2.0.12\VisualC\SDL_ttf_VS2010.sln /p:configuration=Release /t:Clean;SDL2_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Release /t:Clean;Build /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 
-include_gen.cmd %TARGETTOOLSET%
+include_gen.cmd
