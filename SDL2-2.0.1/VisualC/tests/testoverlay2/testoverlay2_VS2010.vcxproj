@@ -219,6 +219,10 @@ copy "$(SolutionDir)\..\test\moose.dat" "$(TargetDir)\moose.dat"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Library Include="..\..\SDL\$(Platform)\$(Configuration)\SDL2.lib" />
+    <Library Include="..\..\SDLmain\$(Platform)\$(Configuration)\SDL2main.lib" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="..\..\..\test\testoverlay2.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -74,8 +74,3 @@ SDL2_mixer-2.0.0
 SDL2_ttf-2.0.0
 stdint.h (in misc folder, for VS2005)
 zlib 1.2.7
-
-Additional notes
-================
-
-SDL_stdint.c of SDL2 was modified
