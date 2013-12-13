@@ -91,17 +91,15 @@ PIXMAN_BEGIN_DECLS
 #  include <inttypes.h>
 /* VS 2010 (_MSC_VER 1600) has stdint.h */
 #elif defined (_MSC_VER) && _MSC_VER < 1600
-// Patch by Ghabry: Include our stdint.h
-/*typedef __int8 int8_t;
+typedef __int8 int8_t;
 typedef unsigned __int8 uint8_t;
 typedef __int16 int16_t;
 typedef unsigned __int16 uint16_t;
 typedef __int32 int32_t;
 typedef unsigned __int32 uint32_t;
 typedef __int64 int64_t;
-typedef unsigned __int64 uint64_t;*/
-#  include <stdint.h>
-// End of Patch
+typedef unsigned __int64 uint64_t;
+#elif defined (_AIX)
 #  include <sys/inttypes.h>
 #else
 #  include <stdint.h>
@@ -1032,7 +1030,7 @@ struct pixman_triangle
 #define pixman_trapezoid_valid(t)				   \
     ((t)->left.p1.y != (t)->left.p2.y &&			   \
      (t)->right.p1.y != (t)->right.p2.y &&			   \
-     (int) ((t)->bottom - (t)->top) > 0)
+     ((t)->bottom > (t)->top))
 
 struct pixman_span_fix
 {
