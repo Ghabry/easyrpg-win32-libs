@@ -201,7 +201,7 @@ __declspec(selectany) int _fltused = 1;
 /* The optimizer on Visual Studio 2010/2012 generates memcpy() calls */
 #if _MSC_VER >= 1600 && defined(_WIN64) && !defined(_DEBUG)
 #include <intrin.h>
-
+#if 0 // GHABRY FOR EASYRPG
 #pragma function(memcpy)
 void * memcpy ( void * destination, const void * source, size_t num )
 {
@@ -233,15 +233,16 @@ void * memcpy ( void * destination, const void * source, size_t num )
     }
     return destination;
 }
+#endif
 #endif /* _MSC_VER == 1600 && defined(_WIN64) && !defined(_DEBUG) */
 
 #ifdef _M_IX86
 
-void
+/*void // GHABRY FOR EASYRPG
 __declspec(naked)
 _chkstk()
 {
-}
+}/*
 
 /* Float to long */
 void
@@ -295,11 +296,11 @@ localexit:
     /* *INDENT-ON* */
 }
 
-void
+/*void // GHABRY FOR EASYRPG
 _ftol2_sse()
 {
     _ftol();
-}
+}*/
 
 /* 64-bit math operators for 32-bit systems */
 void
