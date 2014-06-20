@@ -17,8 +17,8 @@ Replace TOOLSET with one listed below (e.g. v100)
 The only official supported toolset is v100, but others should work, too.
 
 Compiler flags and requirements:
-Release builds: /O2, /MT, /Zi and /arch:SSE2 enabled.
-Debug builds: /MTd and /Zi enabled.
+Release builds: /O2, /MD, /Zi and /arch:SSE2 enabled.
+Debug builds: /MDd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
 OS requirements: Depending on the toolset, v100 needs Windows XP SP2 or newer
 
@@ -55,6 +55,7 @@ Library list
 ============
 expat 2.1.0
 freetype 2.4.11
+icu4c-53.1
 libjpeg 9
 libmad 0.15.1b
 libmikmod 3.2.0
@@ -79,3 +80,5 @@ Additional notes
 ================
 
 SDL_stdint.c of SDL2 was modified to integrate in the build system better.
+mikmod_build.h of libmikmod was patched to work around a bug when linking
+against the dynamic c++ runtime.

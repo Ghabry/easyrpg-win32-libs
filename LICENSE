@@ -5,6 +5,7 @@ In short:
 DirectX SDK: non-free (see EULA)
 expat: MIT
 Freetype: FreeType License or GPLv2 or later (see docs/LICENSE.TXT)
+icu4c: ICU license
 libjpeg: Custom license (see README "LEGAL ISSUES" section)
 libmad: GPLv2 or later
 libmikmod: LGPLv2.1 or later
@@ -13,8 +14,9 @@ libpng: zlib
 libvorbis: BSD
 pixman: MIT
 SDL: LPGLv2.1 or later
-SDL image: zlib
-SDL mixer: zlib
-SDL ttf: zlib
+SDL2: zlib
+SDL(2) image: zlib
+SDL(2) mixer: zlib
+SDL(2) ttf: zlib
 stdint.h: Public Domain
 zlib: zlib
