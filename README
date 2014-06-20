@@ -80,5 +80,3 @@ Additional notes
 ================
 
 SDL_stdint.c of SDL2 was modified to integrate in the build system better.
-mikmod_build.h of libmikmod was patched to work around a bug when linking
-against the dynamic c++ runtime.
