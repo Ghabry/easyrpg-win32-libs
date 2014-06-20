@@ -62,4 +62,8 @@ msbuild SDL2_mixer-2.0.0\VisualC\SDL_mixer_VS2010.sln /p:configuration=Release /
 msbuild SDL2_ttf-2.0.12\VisualC\SDL_ttf_VS2010.sln /p:configuration=Release /t:Clean;SDL2_ttf /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 msbuild zlib-1.2.7\win32\zlib100\zlib.sln /p:configuration=Release /t:Clean;Build /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
 
+pushd icu4c-53.1
+build_icu.cmd
+popd
+
 include_gen.cmd
