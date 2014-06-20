@@ -23,6 +23,7 @@ if "%Platform%"=="X64" (
   xcopy /Y /I lib\*.lib ..\..\build\lib\%TARGETTOOLSET%\x86\Debug
 )
 
+del lib\*.lib
 sh runConfigureICU Cygwin/MSVC --enable-static --disable-shared --disable-tests --disable-samples --with-data-packaging=static --prefix "$PWD/../lib"
 make clean
 make
