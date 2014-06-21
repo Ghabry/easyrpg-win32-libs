@@ -19,4 +19,5 @@ xcopy /Y SDL2-2.0.1\include\*.h build\include\SDL2\
 xcopy /Y SDL2_image-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_mixer-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_ttf-2.0.12\SDL_*.h build\include\SDL2
-xcopy /Y /I icu4c-53.1\source\i18n\lib\include\unicode build\include\unicode
+xcopy /Y /I icu4c-53.1\source\common\unicode build\include\unicode
+xcopy /Y /I icu4c-53.1\source\i18n\unicode build\include\unicode
