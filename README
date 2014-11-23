@@ -69,7 +69,7 @@ SDL 1.2.15
 SDL_image 1.2.12 (BMP, GIF, JPG, PNG support)
 SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
 SDL_ttf 2.0.11
-SDL2-2.0.1
+SDL2-2.0.3
 SDL2_image-2.0.0
 SDL2_mixer-2.0.0
 SDL2_ttf-2.0.0

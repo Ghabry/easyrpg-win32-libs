@@ -15,7 +15,7 @@ xcopy /Y SDL-1.2.15\include\*.h build\include\SDL1_2\
 xcopy /Y SDL_image-1.2.12\SDL_*.h build\include\SDL1_2
 xcopy /Y SDL_mixer-1.2.12\SDL_*.h build\include\SDL1_2
 xcopy /Y SDL_ttf-2.0.11\SDL_*.h build\include\SDL1_2
-xcopy /Y SDL2-2.0.1\include\*.h build\include\SDL2\
+xcopy /Y SDL2-2.0.3\include\*.h build\include\SDL2\
 xcopy /Y SDL2_image-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_mixer-2.0.0\SDL_*.h build\include\SDL2
 xcopy /Y SDL2_ttf-2.0.12\SDL_*.h build\include\SDL2
