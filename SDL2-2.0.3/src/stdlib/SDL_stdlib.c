@@ -244,6 +244,7 @@ __declspec(selectany) int _fltused = 1;
 #endif
 
 /* The optimizer on Visual Studio 2010/2012 generates memcpy() calls */
+#if 0
 #if _MSC_VER >= 1600 && defined(_WIN64) && !defined(_DEBUG)
 #include <intrin.h>
 
@@ -279,6 +280,7 @@ void * memcpy ( void * destination, const void * source, size_t num )
     return destination;
 }
 #endif /* _MSC_VER == 1600 && defined(_WIN64) && !defined(_DEBUG) */
+#endif
 
 #ifdef _M_IX86
 
