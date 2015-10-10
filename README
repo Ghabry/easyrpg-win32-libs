@@ -54,26 +54,20 @@ order to fix this.
 Library list
 ============
 expat 2.1.0
-freetype 2.4.11
-icu4c-53.1
-libjpeg 9
+freetype 2.6.1
+icu4c-55.1
 libmad 0.15.1b
-libmikmod 3.2.0
-libogg 1.3.0
-libpng 1.5.14
-libvorbis 1.3.3
-libvorbisfile 1.3.3 (included with libvorbis)
+libmodplug 0.8.8.5
+libogg 1.3.2
+libpng 1.6.18
+libvorbis 1.3.5
+libvorbisfile 1.3.5 (included with libvorbis)
 native_midi (included with SDL_mixer)
-Pixman 0.32.4
-SDL 1.2.15
-SDL_image 1.2.12 (BMP, GIF, JPG, PNG support)
-SDL_mixer 1.2.12 (WAV, MOD, MP3, OGG and MID support)
-SDL_ttf 2.0.11
-SDL2-2.0.3
-SDL2_image-2.0.0
-SDL2_mixer-2.0.0
-SDL2_ttf-2.0.0
-stdint.h (in misc folder, for VS2005)
+pixman 0.32.8
+SDL2-2.0.3 (hg d3ad01d50bf0)
+SDL2_image-2.0.0 (hg 8fdea48d9a98)
+SDL2_mixer-2.0.0 (hg 1aca2b6d570f)
+SDL2_ttf-2.0.0 (hg 514e61338063)
 zlib 1.2.7
 
 Additional notes

@@ -309,7 +309,7 @@ DateFormat* U_EXPORT2
 DateFormat::createTimeInstance(DateFormat::EStyle style,
                                const Locale& aLocale)
 {
-    return create(style, kNone, aLocale);
+    return createDateTimeInstance(kNone, style, aLocale);
 }
 
 //----------------------------------------------------------------------
@@ -318,13 +318,7 @@ DateFormat* U_EXPORT2
 DateFormat::createDateInstance(DateFormat::EStyle style,
                                const Locale& aLocale)
 {
-    // +4 to set the correct index for getting data out of
-    // LocaleElements.
-    if(style != kNone)
-    {
-        style = (EStyle) (style + kDateOffset);
-    }
-    return create(kNone, (EStyle) (style), aLocale);
+    return createDateTimeInstance(style, kNone, aLocale);
 }
 
 //----------------------------------------------------------------------
@@ -334,11 +328,11 @@ DateFormat::createDateTimeInstance(EStyle dateStyle,
                                    EStyle timeStyle,
                                    const Locale& aLocale)
 {
-    if(dateStyle != kNone)
-    {
-        dateStyle = (EStyle) (dateStyle + kDateOffset);
-    }
-    return create(timeStyle, dateStyle, aLocale);
+   if(dateStyle != kNone)
+   {
+       dateStyle = (EStyle) (dateStyle + kDateOffset);
+   }
+   return create(timeStyle, dateStyle, aLocale);
 }
 
 //----------------------------------------------------------------------
@@ -346,7 +340,77 @@ DateFormat::createDateTimeInstance(EStyle dateStyle,
 DateFormat* U_EXPORT2
 DateFormat::createInstance()
 {
-    return create(kShort, (EStyle) (kShort + kDateOffset), Locale::getDefault());
+    return createDateTimeInstance(kShort, kShort, Locale::getDefault());
+}
+
+//----------------------------------------------------------------------
+
+DateFormat* U_EXPORT2
+DateFormat::createInstanceForSkeleton(
+        Calendar *calendarToAdopt,
+        const UnicodeString& skeleton,
+        const Locale &locale,
+        UErrorCode &status) {
+    LocalPointer<Calendar> calendar(calendarToAdopt);
+    if (U_FAILURE(status)) {
+        return NULL;
+    }
+    if (calendar.isNull()) {
+        status = U_ILLEGAL_ARGUMENT_ERROR;
+        return NULL;
+    }
+    DateFormat *result = createInstanceForSkeleton(skeleton, locale, status);
+    if (U_FAILURE(status)) {
+        return NULL;
+    }
+    result->adoptCalendar(calendar.orphan());
+    return result;
+}
+
+DateFormat* U_EXPORT2
+DateFormat::createInstanceForSkeleton(
+        const UnicodeString& skeleton,
+        const Locale &locale,
+        UErrorCode &status) {
+    LocalPointer<DateTimePatternGenerator> gen(
+            DateTimePatternGenerator::createInstance(locale, status));
+    if (U_FAILURE(status)) {
+        return NULL;
+    }
+    return internalCreateInstanceForSkeleton(
+            skeleton, locale, *gen, status);
+}
+
+DateFormat* U_EXPORT2
+DateFormat::createInstanceForSkeleton(
+        const UnicodeString& skeleton,
+        UErrorCode &status) {
+    return createInstanceForSkeleton(
+            skeleton, Locale::getDefault(), status);
+}
+
+DateFormat* U_EXPORT2
+DateFormat::internalCreateInstanceForSkeleton(
+        const UnicodeString& skeleton,
+        const Locale &locale,
+        DateTimePatternGenerator &gen,
+        UErrorCode &status) {
+    if (U_FAILURE(status)) {
+        return NULL;
+    }
+    DateFormat *fmt = new SimpleDateFormat(
+               gen.getBestPattern(skeleton, status),
+               locale,
+               status);
+   if (fmt == NULL) {
+       status = U_MEMORY_ALLOCATION_ERROR;
+       return NULL;
+   }
+   if (U_FAILURE(status)) {
+       delete fmt;
+       return NULL;
+   }
+   return fmt;
 }
 
 //----------------------------------------------------------------------
@@ -502,10 +566,10 @@ DateFormat::setLenient(UBool lenient)
 {
     if (fCalendar != NULL) {
         fCalendar->setLenient(lenient);
-        UErrorCode status = U_ZERO_ERROR;
-		setBooleanAttribute(UDAT_PARSE_ALLOW_WHITESPACE, true, status);
-        setBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, true, status);
     }
+    UErrorCode status = U_ZERO_ERROR;
+    setBooleanAttribute(UDAT_PARSE_ALLOW_WHITESPACE, lenient, status);
+    setBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, lenient, status);
 }
 
 //----------------------------------------------------------------------
@@ -513,14 +577,14 @@ DateFormat::setLenient(UBool lenient)
 UBool
 DateFormat::isLenient() const
 {
+    UBool lenient = TRUE;
     if (fCalendar != NULL) {
-        UErrorCode status = U_ZERO_ERROR;
-        return fCalendar->isLenient()
-        	&& getBooleanAttribute(UDAT_PARSE_ALLOW_WHITESPACE, status)
-        	&& getBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, status);
+        lenient = fCalendar->isLenient();
     }
-    // fCalendar is rarely null
-    return FALSE;
+    UErrorCode status = U_ZERO_ERROR;
+    return lenient
+        && getBooleanAttribute(UDAT_PARSE_ALLOW_WHITESPACE, status)
+        && getBooleanAttribute(UDAT_PARSE_ALLOW_NUMERIC, status);
 }
 
 void
