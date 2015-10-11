@@ -279,7 +279,7 @@ __declspec(selectany) int _fltused = 1;
 #endif
 
 /* The optimizer on Visual Studio 2005 and later generates memcpy() calls */
-#if (_MSC_VER >= 1400) && defined(_WIN64) && !defined(_DEBUG)
+#if (_MSC_VER == 1600) && defined(_WIN64) && !defined(_DEBUG)
 #include <intrin.h>
 
 #pragma function(memcpy)
@@ -899,33 +899,6 @@ MORE32:
         xor         eax,eax
         and         cl,1Fh
         shl         edx,cl
-        ret
-RETZERO:
-        xor         eax,eax
-        xor         edx,edx
-        ret
-    }
-    /* *INDENT-ON* */
-}
-
-void
-__declspec(naked)
-_allshr()
-{
-    /* *INDENT-OFF* */
-    __asm {
-        cmp         cl,40h
-        jae         RETZERO
-        cmp         cl,20h
-        jae         MORE32
-        shrd        eax,edx,cl
-        sar         edx,cl
-        ret
-MORE32:
-        mov         eax,edx
-        xor         edx,edx
-        and         cl,1Fh
-        sar         eax,cl
         ret
 RETZERO:
         xor         eax,eax
