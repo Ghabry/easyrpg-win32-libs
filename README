@@ -27,19 +27,19 @@ Common toolsets
 
 Command line arguments for the target toolset (assuming that the toolset is
 installed):
-v80 - Visual Studio 2005
-v90 - Visual Studio 2008
 v100 - Visual Studio 2010
 v110 - Visual Studio 2012
 v110_xp - Visual Studio 2012 with Windows XP support
 v120 - Visual Studio 2013
 v120_xp - Visual Studio 2013 with Windows XP support
 windows7.1sdk - Windows 7.1 SDK (compiler same as v100)
+v140 - Visual Studio 2015
+v140_xp - Visual Studio 2015 with Windows XP support
 
 After compiling
 ===============
 
-The resulting files appear in build\TOOLSET.
+The resulting files appear in build.
 The boost (http://www.boost.org/) headers are not included because of their
 gigantic filesize.
 The boost folder must be placed in build\include\boost.
@@ -69,8 +69,3 @@ SDL2_image-2.0.0 (hg 8fdea48d9a98)
 SDL2_mixer-2.0.0 (hg 1aca2b6d570f)
 SDL2_ttf-2.0.0 (hg 514e61338063)
 zlib 1.2.7
-
-Additional notes
-================
-
-SDL_stdint.c of SDL2 was modified to integrate in the build system better.

@@ -1,11 +1,6 @@
 @echo off
 echo EasyRPG Build System - ICU4C
 
-if "%TARGETTOOLSET%"=="" (
-  echo ERROR: This file is not designed to be run directly.
-  goto :EOF
-)
-
 msbuild.exe /? >NUL 2>&1 || (
   echo ERROR: This must be run from a Visual Studio Command Prompt.
   pause
@@ -18,9 +13,9 @@ sh runConfigureICU --enable-debug --disable-release Cygwin/MSVC --enable-static 
 make clean
 make
 if "%Platform%"=="X64" (
-  xcopy /Y /I lib\*.lib ..\..\build\lib\%TARGETTOOLSET%\amd64\Debug
+  xcopy /Y /I lib\*.lib ..\..\build\lib\x64\Debug
 ) else (
-  xcopy /Y /I lib\*.lib ..\..\build\lib\%TARGETTOOLSET%\x86\Debug
+  xcopy /Y /I lib\*.lib ..\..\build\lib\x86\Debug
 )
 
 del lib\*.lib
@@ -28,8 +23,8 @@ sh runConfigureICU Cygwin/MSVC --enable-static --disable-shared --disable-tests 
 make clean
 make
 if "%Platform%"=="X64" (
-  xcopy /Y /I lib\*.lib ..\..\build\lib\%TARGETTOOLSET%\amd64\Release
+  xcopy /Y /I lib\*.lib ..\..\build\lib\x64\Release
 ) else (
-  xcopy /Y /I lib\*.lib ..\..\build\lib\%TARGETTOOLSET%\x86\Release
+  xcopy /Y /I lib\*.lib ..\..\build\lib\x86\Release
 )
 popd

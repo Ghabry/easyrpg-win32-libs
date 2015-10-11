@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_DLL|Win32">
+      <Configuration>Debug_DLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_DLL|x64">
+      <Configuration>Debug_DLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_DLL|Win32">
+      <Configuration>Release_DLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_DLL|x64">
+      <Configuration>Release_DLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2A82E886-E2B6-410C-A0D0-02090DE0CA2F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libexpat</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_DEFAULT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_DEFAULT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_64BIT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_64BIT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_INTEL;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_INTEL;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_64BIT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\SDL2\include;..\libogg\include;..\libvorbis\include;..\libmad;..\libmodplug\src;..\SDL2_mixer\native_midi</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MODPLUG_STATIC;MODPLUG_HEADER=&lt;modplug.h&gt;;FPM_64BIT;WAV_MUSIC;MODPLUG_MUSIC;MP3_MAD_MUSIC;OGG_MUSIC;MID_MUSIC;USE_NATIVE_MIDI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SDL2_mixer\dynamic_flac.c" />
+    <ClCompile Include="..\SDL2_mixer\dynamic_fluidsynth.c" />
+    <ClCompile Include="..\SDL2_mixer\dynamic_mod.c" />
+    <ClCompile Include="..\SDL2_mixer\dynamic_modplug.c" />
+    <ClCompile Include="..\SDL2_mixer\dynamic_mp3.c" />
+    <ClCompile Include="..\SDL2_mixer\dynamic_ogg.c" />
+    <ClCompile Include="..\SDL2_mixer\effect_position.c" />
+    <ClCompile Include="..\SDL2_mixer\effect_stereoreverse.c" />
+    <ClCompile Include="..\SDL2_mixer\effects_internal.c" />
+    <ClCompile Include="..\SDL2_mixer\fluidsynth.c" />
+    <ClCompile Include="..\SDL2_mixer\load_aiff.c" />
+    <ClCompile Include="..\SDL2_mixer\load_flac.c" />
+    <ClCompile Include="..\SDL2_mixer\load_mp3.c" />
+    <ClCompile Include="..\SDL2_mixer\load_ogg.c" />
+    <ClCompile Include="..\SDL2_mixer\load_voc.c" />
+    <ClCompile Include="..\SDL2_mixer\mixer.c" />
+    <ClCompile Include="..\SDL2_mixer\music.c" />
+    <ClCompile Include="..\SDL2_mixer\music_cmd.c" />
+    <ClCompile Include="..\SDL2_mixer\music_flac.c" />
+    <ClCompile Include="..\SDL2_mixer\music_mad.c" />
+    <ClCompile Include="..\SDL2_mixer\music_mod.c" />
+    <ClCompile Include="..\SDL2_mixer\music_modplug.c" />
+    <ClCompile Include="..\SDL2_mixer\music_ogg.c" />
+    <ClCompile Include="..\SDL2_mixer\wavestream.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SDL2_mixer\dynamic_flac.h" />
+    <ClInclude Include="..\SDL2_mixer\dynamic_fluidsynth.h" />
+    <ClInclude Include="..\SDL2_mixer\dynamic_mod.h" />
+    <ClInclude Include="..\SDL2_mixer\dynamic_modplug.h" />
+    <ClInclude Include="..\SDL2_mixer\dynamic_mp3.h" />
+    <ClInclude Include="..\SDL2_mixer\dynamic_ogg.h" />
+    <ClInclude Include="..\SDL2_mixer\effects_internal.h" />
+    <ClInclude Include="..\SDL2_mixer\fluidsynth.h" />
+    <ClInclude Include="..\SDL2_mixer\load_aiff.h" />
+    <ClInclude Include="..\SDL2_mixer\load_flac.h" />
+    <ClInclude Include="..\SDL2_mixer\load_mp3.h" />
+    <ClInclude Include="..\SDL2_mixer\load_ogg.h" />
+    <ClInclude Include="..\SDL2_mixer\load_voc.h" />
+    <ClInclude Include="..\SDL2_mixer\music_cmd.h" />
+    <ClInclude Include="..\SDL2_mixer\music_flac.h" />
+    <ClInclude Include="..\SDL2_mixer\music_mad.h" />
+    <ClInclude Include="..\SDL2_mixer\music_mod.h" />
+    <ClInclude Include="..\SDL2_mixer\music_modplug.h" />
+    <ClInclude Include="..\SDL2_mixer\music_ogg.h" />
+    <ClInclude Include="..\SDL2_mixer\SDL_mixer.h" />
+    <ClInclude Include="..\SDL2_mixer\wavestream.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
