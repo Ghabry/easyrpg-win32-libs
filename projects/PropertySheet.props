@@ -25,6 +25,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
 	  <PreprocessorDefinitions>UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\zlib</AdditionalIncludeDirectories>
+	  <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
 	</ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
