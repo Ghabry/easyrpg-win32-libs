@@ -17,7 +17,8 @@ source/*/Makefile
 source/*/*/Makefile
 source/*/*/*/Makefile
 source/config.*
-source/config/
+source/config/*.pc
+source/config/*.inc
 source/data/build-dir
 source/data/build-local
 source/data/icupkg.inc
