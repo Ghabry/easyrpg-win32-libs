@@ -21,15 +21,15 @@ $sln_name = "easyrpg-win32-libs.sln"
 ## End of Config
 
 ## JSON format
-#	"XXX": {
-#		"Source": "Link for download, must be tar.gz or tar.bz",
+#    "XXX": {
+#       "Source": "Link for download, must be tar.gz or tar.bz",
 #       "BaseDir": "Base path of HeaderDirs, IncludeDirs and SourceDirs, auto detected from Source if missing"
-#		"Preprocessor": ["Preprocessor definitions for all targets"]
-#		"Preprocessor_Debug_x86": ["Preprocessor for Debug x86 only"],
-#		"Preprocessor_Debug_amd64": ["Preprocessor for Debug amd64 only"],
-#		"Preprocessor_Release_x86": ["Preprocessor for Release x86 only"],
-#		"Preprocessor_Release_amd64": ["Preprocessor for Release amd64 only"],
-#		"IncludeDirs": ["Directories passed as additional include dirs to the compiler"],
+#       "Preprocessor": ["Preprocessor definitions for all targets"]
+#       "Preprocessor_Debug_x86": ["Preprocessor for Debug x86 only"],
+#       "Preprocessor_Debug_amd64": ["Preprocessor for Debug amd64 only"],
+#       "Preprocessor_Release_x86": ["Preprocessor for Release x86 only"],
+#       "Preprocessor_Release_amd64": ["Preprocessor for Release amd64 only"],
+#       "IncludeDirs": ["Directories passed as additional include dirs to the compiler"],
 #       "HeaderDirs": ["Directories containing *.h files copied to the install dir (EASYDEV_MSVC/include)"],
 #       "HeaderTargetDir": "Copy to a subdirectory of the install dir",
 #       "HeaderDirsRecursive: Bool (default: False). Copies the whole HeaderDir folders to the install dir.
@@ -37,7 +37,7 @@ $sln_name = "easyrpg-win32-libs.sln"
 #       "SourceDirs": ["Directories to scan for c/cpp files for compiling"],
 #       "SourceExcludes" ["Files to exclude in SourceDirs"],
 #       "DebugFast": Bool (default: False). Writes $debug_fast in release section
-#	}
+#    }
 #
 ##
 
@@ -67,8 +67,12 @@ $env:PATH = "$(Get-ScriptDirectory)/msys/bin;$($env:PATH)"
 $env:__COMPAT_LAYER = "RunAsInvoker"
 
 # Powershell aliases wget and diff
-Remove-Item Alias:wget -Force
-Remove-Item Alias:diff -Force
+while (Test-Path Alias:wget) {
+    Remove-Item Alias:wget -Force
+}
+while (Test-Path Alias:diff) {
+    Remove-Item Alias:diff -Force
+}
 
 # Read depencies.json
 try {

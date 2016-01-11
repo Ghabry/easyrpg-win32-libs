@@ -184,7 +184,11 @@
 		"Source": "http://prdownloads.sourceforge.net/libpng/libpng-1.6.20.tar.gz",
 		"DependsOn": ["zlib"],
 		"HeaderDirs": ["."],
-		"SourceDirs": ["."]
+		"SourceDirs": ["."],
+		"SourceExcludes": [
+			"example.c",
+			"pngtest.c"
+		]
 	},
 	"libvorbis": {
 		"Source": "http://downloads.xiph.org/releases/vorbis/libvorbis-1.3.5.tar.gz",
@@ -193,7 +197,17 @@
 		"HeaderTargetDir": "vorbis",
 		"HeaderDirs": ["include/vorbis"],
 		"SourceDirs": ["lib"],
-		"SourceExcludes": ["psytune.c", "tone.c"]
+		"SourceExcludes": [
+			"barkmel.c",
+			"psytune.c",
+			"tone.c",
+			"vorbisfile.c"
+		]
+	},
+	"libvorbisfile": {
+		"BaseDir": "libvorbis-1.3.5",
+		"DependsOn": ["libvorbis"],
+		"SourceFiles": ["lib/vorbisfile.c"]
 	},
 	"pixman": {
 		"Source": "http://cairographics.org/releases/pixman-0.32.8.tar.gz",
