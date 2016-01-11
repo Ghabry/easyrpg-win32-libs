@@ -96,6 +96,10 @@ foreach ($name in $deps.psobject.properties.name) {
     if ($item.Source) {
         echo "Downloading $name"
         wget $item.Source -P $project_dir --no-check-certificate 2>&1 | Out-Null
+        if ($?) {
+            Write-Error "Downloading $name failed"
+            exit
+        }
     }
 }
 
@@ -116,6 +120,11 @@ foreach ($name in $deps.psobject.properties.name) {
 
         if (($filename_split[-2] -ne "tar") -and ($filename_split[-1] -ne "tgz")) {
             Write-Error "File must be tar archive"
+            exit
+        }
+
+        if (!(Test-Path "$project_dir/$filename")) {
+            Write-Error "File $filename not found"
             exit
         }
 
