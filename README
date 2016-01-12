@@ -4,15 +4,10 @@ for Visual Studio easily.
 Requirements
 ============
 
-Any version of Visual Studio or Windows SDK (with compilers) installed.
-
-DirectX SDK. February 2010 is good enough:
-http://download.microsoft.com/download/F/1/7/F178BCE4-FA19-428F-BB60-F3DEE1130BFA/DXSDK_Feb10.exe
+Any version of Visual Studio 2015 or compatible Windows SDK installed. The libs will compile with older compilers, but EasyRPG Player won't.
 
 The powershell script (setup.ps1) requires execution permissions. Open a
-powershell with admin permissions and run
-"set-executionpolicy remotesigned"
-once.
+powershell with admin permissions and run "set-executionpolicy remotesigned" once.
 
 How to compile
 ==============
@@ -28,7 +23,7 @@ Compiler flags and requirements:
 Release builds: /O2, /MD, /Zi and /arch:SSE2 enabled.
 Debug builds: /MDd and /Zi enabled.
 CPU requirements: Intel Pentium 4 or newer, AMD Athlon 64 or newer
-OS requirements: Depending on the toolset, v100 needs Windows XP SP2 or newer
+OS requirements: Depending on the toolset, v140 needs Windows Vista SP1 or newer.
 
 Common toolsets
 ===============

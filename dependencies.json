@@ -2,7 +2,7 @@
 	"SDL2": {
 		"Source": "https://www.libsdl.org/release/SDL2-2.0.4.tar.gz",
 		"Preprocessor": ["HAVE_LIBC"],
-		"IncludeDirs": ["include", "$(DXSDK_DIR)/Include"],
+		"IncludeDirs": ["include"],
 		"HeaderDirs": ["include"],
 		"SourceFiles": [
 			"src/thread/generic/SDL_syscond.c",
