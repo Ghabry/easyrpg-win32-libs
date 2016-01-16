@@ -12,23 +12,39 @@ IF "%EASYDEV_MSVC%"=="" SET EASYDEV_MSVC=%CD%\build
 copy /Y patches\icudt56l.dat projects\icu\source\data\in
 
 set PATH=%CD%/msys/bin;%PATH%
-pushd projects\icu\source
-sh runConfigureICU --enable-debug --disable-release Cygwin/MSVC --enable-static --disable-shared --disable-tests --disable-samples --with-data-packaging=static --prefix "$EASYDEV_MSVC/lib"
-make clean
-make
-if "%Platform%"=="X64" (
-  xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x64\Debug
-) else (
-  xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x86\Debug
+
+set __tmp=%CD%\projects\icu-native\source
+set ICU_CROSS_BUILD=%__tmp:\=/%
+
+if "%Platform%"=="ARM" (
+  xcopy /Y /I /E projects\icu projects\icu-native
 )
 
-del lib\*.lib
-sh runConfigureICU Cygwin/MSVC --enable-static --disable-shared --disable-tests --disable-samples --with-data-packaging=static --prefix "$EASYDEV_MSVC/lib"
+pushd projects\icu\source
+if "%Platform%"=="ARM" (
+  set CPPFLAGS=-D_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE=1
+  sh runConfigureICU Cygwin/MSVC --with-cross-build=%ICU_CROSS_BUILD% --host=i686-pc-mingw32 --enable-debug --disable-release --enable-static --enable-shared=no --enable-tests=no --enable-samples=no --enable-dyload=no --enable-tools=no --enable-extras=no --enable-icuio=no --with-data-packaging=static
+) else (
+  sh runConfigureICU --enable-debug --disable-release Cygwin/MSVC --enable-static --disable-shared --disable-tests --disable-samples --enable-extras=no --enable-icuio=no --with-data-packaging=static --prefix "$EASYDEV_MSVC/lib"
+)
 make clean
 make
-if "%Platform%"=="X64" (
-  xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x64\Release
+
+xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\%Platform%\Debug
+
+del lib\*.lib
+if "%Platform%"=="ARM" (
+  sh runConfigureICU Cygwin/MSVC --with-cross-build=%ICU_CROSS_BUILD% --host=i686-pc-mingw32 --enable-static --enable-shared=no --enable-tests=no --enable-samples=no --enable-dyload=no --enable-tools=no --enable-extras=no --enable-icuio=no --with-data-packaging=static
 ) else (
-  xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x86\Release
+  sh runConfigureICU Cygwin/MSVC --enable-static --disable-shared --disable-tests --disable-samples --enable-extras=no --enable-icuio=no --with-data-packaging=static --prefix "$EASYDEV_MSVC/lib"
 )
+make clean
+make
+
+xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x64\Release
+
 popd
+
+xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Debug
+xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Release
+

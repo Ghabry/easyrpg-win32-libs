@@ -29,6 +29,8 @@ $sln_name = "easyrpg-win32-libs.sln"
 #       "Preprocessor_Debug_amd64": ["Preprocessor for Debug amd64 only"],
 #       "Preprocessor_Release_x86": ["Preprocessor for Release x86 only"],
 #       "Preprocessor_Release_amd64": ["Preprocessor for Release amd64 only"],
+#       "Preprocessor_Debug_arm: ["Preprocessor for Debug ARM only"],
+#       "Preprocessor_Release_arm: ["Preprocessor for Release ARM only"],
 #       "IncludeDirs": ["Directories passed as additional include dirs to the compiler"],
 #       "HeaderDirs": ["Directories containing *.h files copied to the install dir (EASYDEV_MSVC/include)"],
 #       "HeaderTargetDir": "Copy to a subdirectory of the install dir",
@@ -166,6 +168,8 @@ foreach ($name in $deps.psobject.properties.name) {
     $template = $template.Replace("{Preprocessor_Release_x86}", $item.Preprocessor_Release_x86 -join ';')
     $template = $template.Replace("{Preprocessor_Debug_amd64}", $item.Preprocessor_Debug_amd64 -join ';')
     $template = $template.Replace("{Preprocessor_Release_amd64}", $item.Preprocessor_Release_amd64 -join ';')
+    $template = $template.Replace("{Preprocessor_Debug_arm}", ($item.Preprocessor_Debug_arm -join ';') + ";_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE=1")
+    $template = $template.Replace("{Preprocessor_Release_arm}", ($item.Preprocessor_Release_arm -join ';') + ";_ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE=1")
     $template = $template.Replace("{IncludeDirs}", ($item.IncludeDirs | ForEach-Object {"$($item.BaseDir)/$_"}) -join ';')
     if ($item.DebugFast) {
         $template = $template.Replace("{DebugFast}", $debug_fast)
