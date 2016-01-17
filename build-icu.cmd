@@ -41,10 +41,11 @@ if "%Platform%"=="ARM" (
 make clean
 make
 
-xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\x64\Release
+xcopy /Y /I lib\*.lib %EASYDEV_MSVC%\lib\%Platform%\Release
 
 popd
 
-xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Debug
-xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Release
-
+if "%Platform%"=="ARM" (
+  xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Debug
+  xcopy /Y /I winrt\*.lib %EASYDEV_MSVC%\lib\%Platform%\Release
+)
