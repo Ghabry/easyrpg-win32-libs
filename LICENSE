@@ -4,6 +4,7 @@ library.
 In short:
 expat: MIT
 freetype: FreeType License or GPLv2 or later (see docs/LICENSE.TXT)
+harfbuzz: MIT
 icu4c: ICU license
 libmad: GPLv2 or later
 libmodplug: Public Domain
@@ -14,5 +15,5 @@ pixman: MIT
 SDL2: zlib
 SDL2 image: zlib
 SDL2 mixer: zlib
-SDL2 ttf: zlib
+smpeg: LGPL
 zlib: zlib

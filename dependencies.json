@@ -46,6 +46,19 @@
 			"src/video/windows"
 		]
 	},
+	"SDL2_image": {
+		"Source": "https://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.1.tar.gz",
+		"DependsOn": [
+			"libpng",
+			"SDL2"
+		],
+		"Preprocessor": [
+			"LOAD_BMP",
+			"LOAD_PNG"
+		],
+		"HeaderDirs": ["."],
+		"SourceDirs": ["."]
+	},
 	"SDL2_mixer": {
 		"Source": "https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.1.tar.gz",
 		"DependsOn": [
@@ -54,6 +67,7 @@
 			"libogg",
 			"libvorbis",
 			"native_midi",
+			"smpeg",
 			"SDL2"
 		],
 		"Preprocessor": [
@@ -95,11 +109,18 @@
 	},
 	"native_midi": {
 		"BaseDir": "SDL2_mixer-2.0.1",
-		"SourceDirs": ["native_midi"]
+		"SourceDirs": ["native_midi"],
+		"DepondsOn": ["SDL2"]
 	},
 	"freetype": {
 		"Source": "http://sourceforge.net/projects/freetype/files/freetype2/2.6.2/freetype-2.6.2.tar.gz",
-		"Preprocessor": ["FT2_BUILD_LIBRARY"],
+		"Preprocessor": [
+			"FT2_BUILD_LIBRARY",
+			"FT_CONFIG_OPTION_USE_HARFBUZZ"
+		],
+		"DependsOn": [
+			"harfbuzz"
+		],
 		"IncludeDirs": ["include"],
 		"HeaderDirs": ["include"],
 		"HeaderDirsRecursive": true,
@@ -144,6 +165,45 @@
 			"src/winfonts/winfnt.c"
 		]
 	},
+	"freetype_noharfbuzz": {
+		"BaseDir": "freetype-2.6.2",
+		"HeaderDirs": ["include"],
+		"HeaderDirsRecursive": true
+	},
+	"harfbuzz": {
+		"Source": "https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.1.3.tar.bz2",
+		"Preprocessor": [
+			"HAVE_FREETYPE",
+			"HAVE_OT",
+			"HAVE_UNISCRIBE",
+			"HAVE_ICU",
+			"HAVE_ICU_BUILTIN"
+		],
+		"DependsOn": [
+			"freetype_noharfbuzz",
+			"ICU"
+		],
+		"IncludeDirs": ["src"],
+		"HeaderDirs": ["src"],
+		"SourceFiles": [
+			"src/hb-blob.cc",
+			"src/hb-buffer-serialize.cc",
+			"src/hb-buffer.cc",
+			"src/hb-common.cc",
+			"src/hb-face.cc",
+			"src/hb-font.cc",
+			"src/hb-icu.cc",
+			"src/hb-set.cc",
+			"src/hb-shape.cc",
+			"src/hb-shape-plan.cc",
+			"src/hb-shaper.cc",
+			"src/hb-ot-tag.cc",
+			"src/hb-unicode.cc",
+			"src/hb-warning.cc",
+			"src/hb-ft.cc",
+			"src/hb-uniscribe.cc"
+		]
+	},
 	"libexpat": {
 		"Source": "http://sourceforge.net/projects/expat/files/expat/2.1.0/expat-2.1.0.tar.gz",
 		"Preprocessor": ["COMPILED_FROM_DSP"],
@@ -185,6 +245,7 @@
 			"WIN32",
 			"NOCONTROLS"
 		],
+		"DependsOn": ["SDL2"],
 		"IncludeDirs": ["."],
 		"HeaderDirs": ["."],
 		"SourceDirs": [

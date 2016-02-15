@@ -218,7 +218,7 @@ foreach ($name in $deps.psobject.properties.name) {
             $dirlist = dir ("$project_dir/$($item.BaseDir)/$searchdir")
         }
         foreach ($exclude in $item.SourceExcludes) {
-            $dirlist = $dirlist | Where-Object {$_.FullName -notlike "*$exclude"}
+            $dirlist = $dirlist | Where-Object {$_.FullName -notlike "*$exclude*"}
         }
         $filelist += ($dirlist |
             Where-Object {$_.FullName.EndsWith(".c") -or $_.FullName.EndsWith(".cpp")}).FullName
