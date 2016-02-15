@@ -58,10 +58,11 @@
 		],
 		"Preprocessor": [
 			"MODPLUG_STATIC",
-			"MODPLUG_HEADER=&lt;modplug.h&gt",
+			"MODPLUG_HEADER=&lt;modplug.h&gt;",
 			"WAV_MUSIC",
 			"MODPLUG_MUSIC",
-			"MP3_MAD_MUSIC","OGG_MUSIC",
+			"MP3_MAD_MUSIC",
+			"OGG_MUSIC",
 			"MID_MUSIC",
 			"USE_NATIVE_MIDI"
 		],
@@ -177,6 +178,21 @@
 		"HeaderDirs": ["."],
 		"SourceDirs": ["."],
 		"SourceExcludes": ["minimad.c"]
+	},
+	"smpeg": {
+		"Source": "https://www.libsdl.org/projects/smpeg/release/smpeg2-2.0.0.tar.gz",
+		"Preprocessor": [
+			"WIN32",
+			"NOCONTROLS"
+		],
+		"IncludeDirs": ["."],
+		"HeaderDirs": ["."],
+		"SourceDirs": [
+			".",
+			"audio",
+			"video"
+		],
+		"SourceExcludes": "plaympeg.c"
 	},
 	"libmodplug": {
 		"Source": "http://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.8.5/libmodplug-0.8.8.5.tar.gz",

@@ -16,7 +16,7 @@ set TARGETTOOLSET=%1
 echo Compiling using toolset %TARGETTOOLSET%
 echo.
 @echo on
-msbuild easyrpg-win32-libs.sln /t:Clean;Build /p:configuration=Debug /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
-msbuild easyrpg-win32-libs.sln /t:Clean;Build /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% || goto :EOF
+msbuild easyrpg-win32-libs.sln /t:Clean;Build /p:configuration=Debug /p:PlatformToolset=%TARGETTOOLSET% /m || goto :EOF
+msbuild easyrpg-win32-libs.sln /t:Clean;Build /p:configuration=Release /p:PlatformToolset=%TARGETTOOLSET% /m || goto :EOF
 
-call build-icu.cmd
+:: call build-icu.cmd
